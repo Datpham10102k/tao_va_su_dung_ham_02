@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h1>Kiểm tra số nguyên dương</h1>
+<label for="numb">Nhập một số bất kỳ</label>
+<input type="number" id="numb">
+<button onclick="kiemtraso()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    function kiemtraso(){
+        let so = document.getElementById("numb").value;
+        if ( so > 0 ){
+            document.getElementById("result").innerHTML = `${so} là số nguyên dương`;
+        }else {
+            document.getElementById("result").innerHTML = `${so} không phải là số nguyên dương`;
+        }
+    }
+</script>
+</body>
+</html>

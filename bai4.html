@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h1>Kiểm tra ký tự số</h1>
+<script>
+    function isDigit(char) {
+        // chỉ kiểm tra 1 ký tự
+        if (char.length !== 1) return false;
+        return !isNaN(char); // nếu không phải NaN => là số
+    }
+
+    let input = prompt("Nhập một ký tự:");
+    if (isDigit(input)) {
+        alert(input + " là ký tự số.");
+    } else {
+        alert(input + " KHÔNG phải là ký tự số.");
+    }
+</script>
+</body>
+</html>

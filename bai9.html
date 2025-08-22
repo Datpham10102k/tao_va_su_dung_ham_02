@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    function kiemtrakytu(arr,char){
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === char){
+                count++;
+            }
+        }
+        return count > 0 ? count : -1;
+    }
+    let arr = ['1','0','1','0','2','0','0','0'];
+    let so1 = kiemtrakytu(arr,'1');
+    let so2 = kiemtrakytu(arr,'2');
+    let so0 = kiemtrakytu(arr,'0');
+    let ngoaichuoi = kiemtrakytu(arr,'3');
+    document.write(` Hàm Dat_of_Birth = [${arr}] </br> </br>`);
+    document.write(`Ký tự "1" có trong mảng và có ${so1} lần xuất hiện </br>`);
+    document.write(`Ký tự "2" có trong mảng và có ${so2} lần xuất hiện </br>`);
+    document.write(`Ký tự "0" có trong mảng và có ${so0} lần xuất hiện </br>`);
+    document.write(`Ký tự "3" không có trong mảng nên xuất hiện ${ngoaichuoi} lần`);
+
+</script>
+</body>
+</html>

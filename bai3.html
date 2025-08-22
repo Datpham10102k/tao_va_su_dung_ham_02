@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h1>Tính giai thừa</h1>
+<input type="number" id="numb">
+<button onclick="dap_an()">Tính</button>
+<p id="ketqua"></p>
+<script>
+    function tinhgiathua(x){
+        if (x < 0) return -1;
+        if (x === 0) return 1;
+        let result = 1;
+        for (let i = 1; i <= x; i++) {
+            result *= i;
+        }
+        return result;
+    }
+    function dap_an(){
+    let x = parseInt(document.getElementById("numb").value);
+    let num = Number(x);
+    let ketqua = tinhgiathua(x);
+    if (Number.isInteger(num) && num >= 0) {
+        document.getElementById("ketqua").innerText = ` Kết quả là: ${ketqua}` ;
+    }else {
+        document.getElementById("ketqua").innerText = ` Vui lòng nhập số dương` ;
+    }
+    }
+</script>
+</body>
+</html>

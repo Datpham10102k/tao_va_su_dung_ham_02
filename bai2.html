@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h1>Tính chu vi và diện tích hình tròn</h1>
+<input type="number" id="bankinh">
+<button onclick="dapan()">Tính toán</button>
+<p id="ketqua"></p>
+<p id="ketqua1"></p>
+<script>
+function tinhchuvi (r){
+    chuvi = r * 2 * 3.14;
+    return chuvi;
+}
+function tinhdientich (r){
+    dientich = r * r * 3.14;
+    return dientich;
+}
+function dapan (){
+let r = parseInt(document.getElementById("bankinh").value);
+let C_hinhtron = tinhchuvi(r);
+let S_hinhtron = tinhdientich(r)
+    document.getElementById("ketqua").innerText = `Chu vi hình tròn là: ${C_hinhtron}`;
+    document.getElementById("ketqua1").innerText = `Diện tích hình tròn là: ${S_hinhtron}`;
+}
+</script>
+</body>
+</html>
